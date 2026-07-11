@@ -1,0 +1,21 @@
+
+day 2 summary 
+
+what is agent ?
+
+An agent is a single autonomous unit: a model (or program) that perceives inputs, reasons about them, and takes actions — calling tools, browsing the web, writing code, etc. — to accomplish a goal. It has a loop: observe → think → act → observe again.
+
+what is agentic system 
+
+An agentic system is the broader architecture that contains and orchestrates one or more agents. It includes everything needed to make agents work reliably at scale:
+
+Orchestrators — coordinate which agent does what and in what order
+Memory layers — short-term (context window), long-term (vector stores, databases)
+Tool infrastructure — APIs, sandboxes, MCP servers that agents can call
+Multiple agents — specialized sub-agents handed tasks by an orchestrator
+Guardrails and evals — safety checks, output validation, retry logic
+Human-in-the-loop hooks — approval steps before irreversible actions
+
+A useful analogy: an agent is like a single employee. An agentic system is like the company — the org chart, communication channels, policies, tools, and workflows that make a team of employees actually productive.
+In practice, the line can blur. A single powerful agent with many tools can resemble a simple agentic system. But when people say "agentic system" they typically mean a designed pipeline or network — often multi-agent — where the architecture itself is doing meaningful work beyond what any one agent could do alone.
+The distinction matters most when you're building: one agent is simpler to debug and control; an agentic system unlocks parallelism and specialization but introduces coordination complexity and more failure points.
