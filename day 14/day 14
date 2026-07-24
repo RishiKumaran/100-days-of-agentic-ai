@@ -1,0 +1,50 @@
+
+day 14 summary 
+
+
+
+
+Orchestrators — coordinate which agent does what and in what order
+Memory layers — short-term (context window), long-term (vector stores, databases)
+Tool infrastructure — APIs, sandboxes, MCP servers that agents can call
+Multiple agents — specialized sub-agents handed tasks by an orchestrator
+Guardrails and evals — safety checks, output validation, retry logic
+Human-in-the-loop hooks — approval steps before irreversible actions
+
+A useful analogy: an agent is like a single employee. An agentic system is like the company — the org chart, communication channels, policies, tools, and workflows that make a team of employees actually productive.
+In practice, the line can blur. A single powerful agent with many tools can resemble a simple agentic system. But when people say "agentic system" they typically mean a designed pipeline or network — often multi-agent — where the architecture itself is doing meaningful work beyond what any one agent could do alone.
+The distinction matters most when you're building: one agent is simpler to debug and control; an agentic system unlocks parallelism and specialization but introduces coordination complexity and more failure points.
+
+# Three Parts to this lab
+
+## Part 1: A simple "Agent" and "Agent Loop"
+
+Basically an LLM call. We'll add tracing and streaming to the mix.
+
+## Part 2: Adding a Tool
+
+A familiar one, but oh-so-easy
+
+## Part 3: Adding Memory
+
+So that different Agent calls know about each other
+
+
+# Setting up to send emails from your SMTP server
+
+### STEP 1: Determining your SMTP Server
+
+
+## Agent Orchestration
+
+There are 2 models for Agent Orchestration; by code and by LLMs.
+
+By code: more predictable and deterministic.
+
+By LLMs: more powerful.
+
+An excellent write-up is here:
+
+https://openai.github.io/openai-agents-python/multi_agent/
+
+We will start with by Code.
